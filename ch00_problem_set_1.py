@@ -69,6 +69,15 @@ print()
 # then the maximum number of dimes that fit in the remainder after you subtract the dollars and quarters,
 # and so on for nickels and pennies.
 # The result is that you express the amount as the minimum number of coins needed.
+count = 12.66
+dollars = round(count // 1)
+quarters = round(count-dollars // 0.25)
+dimes = round(count-dollars-quarters) // 0.1
+nickels = round(count-dollars-quarters-dimes)//0.05
+pennies = round(count-dollars-quarters-dimes-nickels) // 0.01
+print("Problem #6: You have", dollars,"dollars,", quarters, "quarters,", dimes, "dimes,", nickels, "nickels, and", pennies, "pennies.")
+
+#the first part of this runs correctly, but I'm not sure why the quarters, dimes, nickels, and, pennies are all wrong.
 
 #PROBLEM 7 (Variable Swap - 2pts)
 # Can you think of a way to swap the values of two variables that does not
