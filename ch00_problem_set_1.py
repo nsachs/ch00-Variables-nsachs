@@ -71,13 +71,12 @@ print()
 # The result is that you express the amount as the minimum number of coins needed.
 count = 12.66
 dollars = round(count // 1)
-quarters = round(count-dollars // 0.25)
-dimes = round(count-dollars-quarters) // 0.1
-nickels = round(count-dollars-quarters-dimes)//0.05
-pennies = round(count-dollars-quarters-dimes-nickels) // 0.01
+quarters = round(count - dollars // 0.25)
+dimes = round(count - dollars - quarters) // 0.1
+nickels = round(count - dollars - quarters - dimes)//0.05
+pennies = round(count - dollars - quarters - dimes - nickels) / 0.01
 print("Problem #6: You have", dollars,"dollars,", quarters, "quarters,", dimes, "dimes,", nickels, "nickels, and", pennies, "pennies.")
-
-#the first part of this runs correctly, but I'm not sure why the quarters, dimes, nickels, and, pennies are all wrong.
+#dollar works but none of the others work
 
 #PROBLEM 7 (Variable Swap - 2pts)
 # Can you think of a way to swap the values of two variables that does not
