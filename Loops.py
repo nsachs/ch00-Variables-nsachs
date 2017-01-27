@@ -68,5 +68,7 @@ for a in range(10):
     for b in range(10):
         for c in range(10):
             for d in range(10):
-                abcd = str(a) + str(b) + str(c) + str(d)
-                print(a, b, c, d)
+                if int(str(d) + str(c) + str(b) + str(a)) == 4 * int(str(a) + str(b) + str(c) + str(d)):
+                    print(a, b, c, d)
+
+#I'm not sure where the zeroes are coming from.
