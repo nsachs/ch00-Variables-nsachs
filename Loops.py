@@ -50,11 +50,17 @@ print()
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
 
-'''
-for i in range(1,6):
-    a = random.randrange(1,7):
-    print(a)
-'''
+c = [0]
+percent_success = 0
+for i in range (10000):
+    x = [0]
+    for j in range(1, 6):
+        y = random.randrange(1, 7)/ j
+        x.append(y * j)
+        if y * j < x[i - 1]:
+            percent_success += 1
+        c.append(x)
+
 
 
 # PROBLEM 4 (Number Puzzler - 6pts)
@@ -70,5 +76,3 @@ for a in range(1, 10):
             for d in range(1, 10):
                 if int(str(d) + str(c) + str(b) + str(a)) == 4 * int(str(a) + str(b) + str(c) + str(d)):
                     print(a, b, c, d)
-
-#I'm not sure where the zeroes are coming from.
