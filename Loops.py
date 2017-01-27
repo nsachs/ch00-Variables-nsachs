@@ -64,10 +64,10 @@ for i in range(1,6):
 # Note: to make ABCD and DCBA conventional numbers, neither A nor D can be zero.
 # Use a quadruple-nested loop to solve.
 
-for a in range(10):
+for a in range(1, 10):
     for b in range(10):
         for c in range(10):
-            for d in range(10):
+            for d in range(1, 10):
                 if int(str(d) + str(c) + str(b) + str(a)) == 4 * int(str(a) + str(b) + str(c) + str(d)):
                     print(a, b, c, d)
 

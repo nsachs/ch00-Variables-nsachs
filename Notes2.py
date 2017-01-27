@@ -137,3 +137,52 @@ else:
 import random
 random.randrange(0,100, 5)
 random.random()
+
+#functions
+def main():
+    def hello():
+        print("Hello")
+
+        hello()
+
+    def line(m,x,b):
+        y = m*x + b
+        print(y)
+
+    line(3,8,2)
+
+    def double(a):
+        return a * 2
+
+    print(double (10))
+    num = double(20)
+    print(num)
+
+
+    def add_product(a,b):
+        add = a + b
+        product = a * b
+
+    return add, product
+        add_product(3,4)
+
+    print(add_product(3,4))
+
+#scope
+x = 10
+
+def fun():
+    #x +=1
+    #y = 10
+    print(x)
+
+fun()
+print(y)
+
+# you can access but cannot change global variables
+
+#main function
+#if __name__ == 'main'
+
+if __name__ == "__main__":
+    main()
