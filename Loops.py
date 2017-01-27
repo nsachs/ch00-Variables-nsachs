@@ -14,6 +14,7 @@ while a < 1000 and b < 1000:
     print(b)
     a += b
     b += a
+print()
 
 # PROBLEM 2 (Number Guessing Game - 6pts)
 # Write a program that takes a random integer between 1 and 1000
@@ -38,7 +39,7 @@ while not done:
     elif guess == computer:
         done = True
 print("You guessed it!")
-
+print()
 
 
 # PROBLEM 3 (Dice Hi-Low - 6pts)
@@ -49,11 +50,11 @@ print("You guessed it!")
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
 
-
+'''
 for i in range(1,6):
     a = random.randrange(1,7):
     print(a)
-
+'''
 
 
 # PROBLEM 4 (Number Puzzler - 6pts)
@@ -62,3 +63,10 @@ for i in range(1,6):
 # What are the digits?
 # Note: to make ABCD and DCBA conventional numbers, neither A nor D can be zero.
 # Use a quadruple-nested loop to solve.
+
+for a in range(10):
+    for b in range(10):
+        for c in range(10):
+            for d in range(10):
+                abcd = str(a) + str(b) + str(c) + str(d)
+                print(a, b, c, d)
