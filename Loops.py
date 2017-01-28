@@ -49,7 +49,7 @@ print()
 # For example, the sequence “1, 1, 4, 4, 6” is a success,
 # but “1, 1, 4, 3, 6” is not. Determine the
 # probability of success using a simulation of a large number of trials.
-
+'''
 c = [0]
 percent_success = 0
 for i in range (10000):
@@ -61,7 +61,7 @@ for i in range (10000):
             percent_success += 1
         c.append(x)
 
-
+'''
 
 # PROBLEM 4 (Number Puzzler - 6pts)
 # A, B, C, and D are all different digits.
@@ -76,3 +76,11 @@ for a in range(1, 10):
             for d in range(1, 10):
                 if int(str(d) + str(c) + str(b) + str(a)) == 4 * int(str(a) + str(b) + str(c) + str(d)):
                     print(a, b, c, d)
+
+
+def calculator(first_number, second_number):
+    return first_number + second_number
+    return first_number * second_number
+
+
+print(calculator(2, 3))

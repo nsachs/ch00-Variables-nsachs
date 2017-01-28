@@ -162,12 +162,12 @@ def main():
     def add_product(a,b):
         add = a + b
         product = a * b
-
+'''
     return add, product
         add_product(3,4)
 
     print(add_product(3,4))
-
+'''
 #scope
 x = 10
 
