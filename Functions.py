@@ -31,9 +31,11 @@ user(input("Enter a number: "))
 # Calculate the value of e (from the math library) to the power of -1, 0, 1, 2, and 3.
 # display the results, with 5 decimals, in a nicely formatted manner.
 
+
 # PROBLEM 5 (Random int - 3pts)
 # Generate a random integer between 1 and 10 (1 and 10 both included),
 # but only use the random() function (randrange is not allowed here)
+
 
 # PROBLEM 6 (add me, multiply me - 3pts)
 # Make a function which takes in two integers and RETURNS their sum AND their product.

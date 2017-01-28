@@ -78,7 +78,3 @@ for a in range(1, 10):
                     print(a, b, c, d)
 
 
-def calculator(first_number, second_number):
-    return first_number + second_number, first_number * second_number
-
-print(calculator(int(input("Enter a number: ")),int(input("Enter a number: "))))
