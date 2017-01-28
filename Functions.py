@@ -40,9 +40,6 @@ user(input("Enter a number: "))
 # PROBLEM 6 (add me, multiply me - 3pts)
 # Make a function which takes in two integers and RETURNS their sum AND their product.
 
-def calculator(first_number, second_number):
-    return first_number + second_number, first_number * second_number
 
-print(calculator(int(input("Enter a number: ")),int(input("Enter another number: "))))
 
 
