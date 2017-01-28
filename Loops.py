@@ -79,8 +79,6 @@ for a in range(1, 10):
 
 
 def calculator(first_number, second_number):
-    return first_number + second_number
-    return first_number * second_number
+    return first_number + second_number, first_number * second_number
 
-
-print(calculator(2, 3))
+print(calculator(int(input("Enter a number: ")),int(input("Enter a number: "))))
