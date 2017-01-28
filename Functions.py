@@ -5,6 +5,14 @@
 # You will need to use the input() function.
 # Make a call to that function
 
+'''
+def user(a):
+    a = 0
+
+
+user(input("Enter a number: "))
+'''
+
 # PROBLEM 2 (Pythagorean theorem - 4pts)
 # The Pythagorean theorem states that of a right triangle, the square of the
 # length of the diagonal side is equal to the sum of the squares of the lengths
@@ -29,3 +37,12 @@
 
 # PROBLEM 6 (add me, multiply me - 3pts)
 # Make a function which takes in two integers and RETURNS their sum AND their product.
+
+def calculator():
+    first_number = print(input("Enter a number: "))
+    second_number = print(input("Enter another number: "))
+    print(first_number + second_number)
+    print(first_number * second_number)
+
+calculator()
+
