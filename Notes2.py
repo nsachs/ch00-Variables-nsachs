@@ -1,6 +1,6 @@
 #NOTES
 # VARIABLES
-
+'''
 #variables assignment and names
 camelCase = "No"
 snake_case = "Yes"
@@ -162,12 +162,12 @@ def main():
     def add_product(a,b):
         add = a + b
         product = a * b
-'''
+
     return add, product
         add_product(3,4)
 
     print(add_product(3,4))
-'''
+
 #scope
 x = 10
 
@@ -186,3 +186,57 @@ print(y)
 
 if __name__ == "__main__":
     main()
+'''
+#-----Jan 30 ---------
+
+def fun(param):
+    print(param)
+
+fun(10)
+
+#anonymous functions with lambda (function shortcut)
+#obj_var = lambda params: function
+# make a lambda function to add numbers
+
+add_two = lambda num1,num2: num1 +num2
+print(add_two(2, 3))
+
+#iterating through a list (2 ways... now 3)
+
+this_list = [5, 10, 15, 20, 25]
+
+for number in this_list:
+    print(number)
+    number += 1
+    print(number)
+
+print(this_list)
+
+for i in range(len(this_list)):
+    print(this_list[i])
+    this_list[i] += 1
+
+print(this_list)
+
+#python'a map function (iteration shortcut)
+# map (functions, list)
+print(list(map(lambda x: x**2, this_list)))
+print(this_list)
+
+#index and slicing lists
+my_list = [1,2,3,4,5,6,7]
+my_list2d = [[10,20], [30,40], [50,60]]
+
+print(my_list[0])
+print(my_list[3:5])
+print(my_list[3:])
+
+print(my_list2d[0])
+print(my_list2d[0][0])
+print(my_list2d[2][1])
+print(my_list2d[1:][1][0])
+
+
+#list methods
+a = [1,2,3]
+
