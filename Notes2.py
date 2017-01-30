@@ -239,4 +239,41 @@ print(my_list2d[1:][1][0])
 
 #list methods
 a = [1,2,3]
+b = [4,5,6]
+c = [7,8,9]
 
+a[0] = 10
+print(a)
+
+#append (adds to the end of a list)
+a.append(4)
+print(a)
+
+#extend (adds two lists together)
+#a.append([2,3])
+a.extend([2,3])
+print(a)
+a.extend(b)
+print(a)
+
+#insert(index,value) (place object at the index)
+b.insert(2,100)
+b.insert(2,5)
+print(b)
+
+#remove(index) (item you want to remove)
+b.remove(5)
+print(b)
+
+#pop(index) (returns item removed)
+first_in_line = c.pop(0)
+print(c)
+print(first_in_line)
+
+#count (how many of these do I have in the list)
+print(a.count(4))
+print(a)
+
+#reverse (performed on list)
+a.reverse()
+print(a)
