@@ -1,4 +1,6 @@
+
 #NOTES
+
 # VARIABLES
 '''
 #variables assignment and names
@@ -186,7 +188,6 @@ print(y)
 
 if __name__ == "__main__":
     main()
-'''
 #-----Jan 30 ---------
 
 def fun(param):
@@ -277,3 +278,220 @@ print(a)
 #reverse (performed on list)
 a.reverse()
 print(a)
+
+#conditions
+a = True
+b = False
+
+if not a:
+    print("not")
+if a:
+    print("yes")
+if a != b:
+    print("Not equal")
+# ----- February 2 ------#
+# Modules and libraries have advantages.
+'''
+#What it does...
+#When you import a file, it automatically runs the code.
+#It also pulls all the def, varialbes, classes, etc. into your program for use (as long as you know how to call on them)
+#Using if __name__ == "__main__" in your modules
+'''
+import importme
+print("Hello from", __name__)
+
+print(importme.my_var)
+
+#general import and scope
+#multiple library import s
+#import name of library
+import math, random
+
+print(random.randrange(100))
+print(math.pi)
+
+
+#local import and scope
+#wildcard imports (and why we won't generally use them)
+#from name_of_library import name_of_object, object(s)
+from math import pi
+print(pi)
+
+from math import *
+print(e)
+print(cos(pi))
+
+#importning under alternate name (save some typing or clarity)
+#import name_library as alt_name
+
+import math as m
+print(m.cos(m.pi))
+
+# available libraries, installing libraries
+# help("modules") is useful
+
+# creating your own library/module
+
+importme.print_stuff()
+
+#pitfalls (circular imports and name making
+random.randrange(100)
+
+#python packages, __init__.py, and dot notation
+
+# ------- February 6 ---------#
+########
+#Using files
+########
+
+#opening files
+# open ("name.ext", "r, w, or a")
+#writing to files
+#open("name.ext", "W")
+#file.write(string)
+#closing files
+#file.close()
+import random
+
+file = open("my_file.txt", "w")
+file.write("Hello file!" + "\n")
+for i in range(100):
+    file.write(str(i) + "\n")
+file.close()
+
+#reading a file
+#open ("name.ext", "r")
+file = open("my_file.txt", "r")
+for line in file:
+    print(line, end = " ")
+file.close()
+'''
+# ----- February 9 ------- #
+'''
+#open file to read
+file = open("super_villian.txt", "r")
+villain_list = [] #creat list/array to read info
+#loop through file to build list
+for line in file:
+    villain_list.append(line.strip())# use line.strip() to take spaces off and \n
+
+print(villain_list)
+
+#linear search
+#set a key and index
+key = "The Deadly Raven"
+i = 0
+
+#cycle through index while it is not == key and check it i is less that len(list)
+while villain_list[i] != key and i < len(villain_list):
+    i += 1
+
+if i <len(villain_list):
+    print("Found", key, "at position", i) #that means you found it at position
+else:
+    print("Key is not in list") #else means you didn't find it
+
+
+#linear searches are time and resource hogs
+#thre must be a better way.
+#number guesssing game
+
+import random
+target = random.randrange(1, 101)
+guess = 0
+
+while guess != target:
+    guess = int(input("guess a number between 1 and 100: "))
+    if guess > target:
+        print("Too high")
+    elif guess < target:
+        print("Too low")
+    elif guess == target:
+        print("correct")
+
+
+#Binary Search
+print("Alligator" > "Apple")
+
+key = "Aldric Foxe"
+lower_bound = 0
+upper_bound = len(villain_list) - 1
+
+found = False
+
+while lower_bound <= upper_bound and not found:
+    middle_pos = (lower_bound + upper_bound) // 2
+
+    if villain_list[middle_pos] < key:
+        lower_bound = middle_pos + 1
+    elif villain_list[middle_pos] > key:
+        upper_bound = pos - 1
+    else:
+        found = True
+
+if found:
+    print("Found", key, "at position", middle_pos)
+else:
+    print(key, "not in list")
+
+
+# ------- February 10 ------- #
+import re
+
+def split_line(line):
+    #This function takes in a line of text
+    #a list of words in the line
+    return re.findall('[A-Za-z]+(?:\'[A-Za-z]+)?', line)
+
+print(split_line("Hello, how are you?"))
+
+file = open("AliceInWonderland", "r")
+
+alice = 0
+
+for line in file:
+    #print(line.strip())
+    words = split_line(line)
+    #print(words)
+    for word in words:
+        #print(word.upper())
+        if word.upper() == "ALICE" or word.upper() == "ALICE'S":
+            alice += 1
+print(alice)
+
+'''
+# ------- February 22 --------- #
+list = ["abe", "bev", "cam", "dan", "eve", "flo"]
+
+#Swapping
+temp = list[0]
+list[0] = list[1]
+list[1] = temp
+print(list)
+
+list[4], list[5] = list[5], list[4]
+print(list)
+
+#Selection Sort
+
+import random
+
+my_list = []
+
+for i in range(500):
+    my_list.append(random.randrange(100))
+print(my_list)
+
+for pos in range(len(my_list)):
+    min_pos = pos
+    for scan_pos in range(min_pos, len(my_list)):
+        if my_list [scan_pos] < my_list[min_pos]:
+            min_pos = scan_pos
+    temp = my_list[pos]
+    my_list[pos] = my_list[min_pos]
+    my_list[min_pos] = temp
+
+print(my_list)
+
+
+
